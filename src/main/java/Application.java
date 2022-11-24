@@ -1,24 +1,23 @@
 public class Application {
+
     public static void main(String[] args) {
-        Fabric obj1 = new Fabric();
-        obj1.setName("Бетмен");
-        obj1.namePower();
-        obj1.setPower(10);
-        obj1.setType(Fabric.Type.DC);
-        System.out.println(obj1);
-        Fabric obj2 = new Fabric();
-        obj2.setName("Супермен");
-        obj2.namePower();
-        obj2.setPower(10);
-        obj2.setType(Fabric.Type.MARVEL);
-        System.out.println(obj2);
-        Fabric obj3 = new Fabric();
-        obj3.setName("Халк");
-        obj3.namePower();
-        obj3.setPower(8);
-        obj3.setType(Fabric.Type.DC);
-        System.out.println(obj3);
-
-
+        Fabric betman = new Fabric("Бетмен", 10, Fabric.Type.DC);
+        Fabric superman = new Fabric("Супермен", 9, Fabric.Type.MARVEL);
+        Fabric aquamen = new Fabric("Аквамен", 7, Fabric.Type.MARVEL);
+        Fabric halk = new Fabric("Халк", 8, Fabric.Type.DC);
+        Fabric spider = new Fabric("Человек - паук", 5, Fabric.Type.DC);
+        Fabric rossomaha = new Fabric("Россомаха", 9, Fabric.Type.DC);
+        betman.namePower();
+        superman.namePower();
+        aquamen.namePower();
+        halk.namePower();
+        spider.namePower();
+        rossomaha.namePower();
+        Arena boi1 = new Arena();
+        boi1.fight(betman, spider);
+        Arena boi2 = new Arena();
+        boi2.fight(halk,rossomaha);
+        Arena boi3 = new Arena();
+        boi3.fight(superman, betman);
     }
 }
