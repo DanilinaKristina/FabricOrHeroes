@@ -16,11 +16,22 @@ public class Arena {
         name1.namePower();
         System.out.println(name2.getName() + " кричит в ответ \n" );
         name2.namePower();
-        if(name1.getPower() < name2.getPower() ) {
-            System.out.println("\nВ битве победил " + name2.getName());
+        int i = (int) Math.floor(Math.random() * 101);
+        if( i <= 85){
+            if(name1.getPower() < name2.getPower() ) {
+                System.out.println("\nВ битве победил " + name2.getName());
+            } else {
+                System.out.println("\nВ битве победил " + name1.getName());
+            }
         } else {
-            System.out.println("\nВ битве победил " + name1.getName());
+            if(name1.getPower() < name2.getPower() ) {
+                System.out.println("\nВмешался случай! Жизнь преподнесла сюрприз. Победил " + name1.getName());
+            } else {
+                System.out.println("\nВмешался случай! Жизнь преподнесла сюрприз. Победил " + name2.getName());
+            }
         }
+
+
 
     }
 }

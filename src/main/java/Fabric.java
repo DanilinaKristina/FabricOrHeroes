@@ -16,7 +16,6 @@ public class Fabric {
         this.type = type;
     }
     public  Fabric (){
-
     }
    public void namePower () {
         if (name.equals("Бетмен")){
