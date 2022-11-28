@@ -8,9 +8,7 @@ import java.sql.SQLOutput;
 @Setter
 @ToString
 public class Arena {
-    public Arena () {
-    }
-    public void fight (Fabric name1, Fabric name2){
+    public void fight (Hero name1, Hero name2){
         System.out.println("Битва между " + name1.getName() + " и " + name2.getName());
         System.out.println("Битва началась! " + name1.getName() + " кричит \n" );
         name1.namePower();

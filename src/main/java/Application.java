@@ -1,23 +1,21 @@
+import lombok.ToString;
+
+@ToString
+
 public class Application {
 
     public static void main(String[] args) {
-        Fabric betman = new Fabric("Бетмен", 10, Fabric.Type.DC);
-        Fabric superman = new Fabric("Супермен", 9, Fabric.Type.MARVEL);
-        Fabric aquamen = new Fabric("Аквамен", 7, Fabric.Type.MARVEL);
-        Fabric halk = new Fabric("Халк", 8, Fabric.Type.DC);
-        Fabric spider = new Fabric("Человек - паук", 5, Fabric.Type.DC);
-        Fabric rossomaha = new Fabric("Россомаха", 9, Fabric.Type.DC);
-        betman.namePower();
-        superman.namePower();
-        aquamen.namePower();
-        halk.namePower();
-        spider.namePower();
-        rossomaha.namePower();
+        Fabric hero = new Fabric();
+        Hero hero1 = new Hero(hero.createHero(args[0]),10, Hero.Type.DC);
+        Hero hero2 = new Hero(hero.createHero(args[1]), 8, Hero.Type.MARVEL);
+        Hero hero3 = new Hero(hero.createHero(args[2]), 9, Hero.Type.MARVEL);
+        Hero hero4 = new Hero(hero.createHero(args[3]),5, Hero.Type.DC);
+        Hero hero5 = new Hero(hero.createHero(args[4]), 4, Hero.Type.MARVEL);
+        Hero hero6 = new Hero(hero.createHero(args[5]),7, Hero.Type.DC);
         Arena boi1 = new Arena();
-        boi1.fight(betman, spider);
-        Arena boi2 = new Arena();
-        boi2.fight(halk,rossomaha);
-        Arena boi3 = new Arena();
-        boi3.fight(superman, betman);
+        boi1.fight(hero1,hero2);
+        boi1.fight(hero4,hero6);
+        boi1.fight(hero3,hero4);
     }
 }
+
